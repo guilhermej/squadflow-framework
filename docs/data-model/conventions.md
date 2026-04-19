@@ -67,7 +67,7 @@ Rules that every entity schema and every implementation of SquadFlow must follow
 
 Every schema's `$id` follows:
 
-```
+```text
 https://squadflow.dev/schemas/<entity>.json
 ```
 
