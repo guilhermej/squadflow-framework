@@ -208,7 +208,7 @@ Full RACI matrix and decision-log pattern: [`docs/processes/governance.md`](docs
 ## Quickstart
 
 <p>
-  <img src="https://img.shields.io/badge/⏱_15_min-lightgray"> <img src="https://img.shields.io/badge/🧩_no_install-lightgray"> <img src="https://img.shields.io/badge/📝_works_on_Notion,_paper,_anything-lightgray">
+  <img src="https://img.shields.io/badge/⏱_15_min-lightgray" alt="15 minutes"> <img src="https://img.shields.io/badge/🧩_no_install-lightgray" alt="No install"> <img src="https://img.shields.io/badge/📝_works_on_Notion,_paper,_anything-lightgray" alt="Works on Notion, paper, anything">
 </p>
 
 1. **Create one Company and one Brand.** Even a single-brand startup creates both — they diverge the day you grow.
@@ -219,6 +219,7 @@ Full RACI matrix and decision-log pattern: [`docs/processes/governance.md`](docs
 
 > [!TIP]
 > Hit a question not obviously answered? Three places to look:
+>
 > - **What is this thing?** → [`docs/ontology/`](docs/ontology/)
 > - **What state can it be in?** → [`docs/lifecycles/`](docs/lifecycles/)
 > - **Who approves it?** → [`docs/processes/governance.md`](docs/processes/governance.md)
