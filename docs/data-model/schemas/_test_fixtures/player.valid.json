@@ -1,0 +1,13 @@
+{
+  "id": "c1d2e3f4-a5b6-4789-c012-3456789abcde",
+  "full_name": "Ana Beatriz Silva",
+  "display_name": "Ana Silva",
+  "email": "ana@helios.co",
+  "company_ids": ["a1b2c3d4-e5f6-4789-a012-3456789abcde"],
+  "role_slugs": ["player", "squad_lead"],
+  "state": "active",
+  "joined_on": "2025-09-01",
+  "offboarded_on": null,
+  "created_at": "2025-09-01T09:00:00Z",
+  "updated_at": "2026-04-19T10:00:00Z"
+}

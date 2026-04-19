@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/player.json",
+  "title": "Player",
+  "description": "An individual who executes work in the organization.",
+  "type": "object",
+  "required": ["id", "full_name", "email", "company_ids", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":             { "type": "string", "format": "uuid" },
+    "full_name":      { "type": "string", "minLength": 1, "maxLength": 200 },
+    "display_name":   { "type": ["string", "null"], "maxLength": 200 },
+    "email":          { "type": "string", "format": "email" },
+    "company_ids":    {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "format": "uuid" }
+    },
+    "role_slugs":     {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["player", "squad_lead", "factory_manager", "project_owner", "okr_sponsor", "org_steward"]
+      },
+      "uniqueItems": true
+    },
+    "state":          { "type": "string", "enum": ["candidate", "active", "on_leave", "offboarded"] },
+    "joined_on":      { "type": ["string", "null"], "format": "date" },
+    "offboarded_on":  { "type": ["string", "null"], "format": "date" },
+    "created_at":     { "type": "string", "format": "date-time" },
+    "updated_at":     { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
