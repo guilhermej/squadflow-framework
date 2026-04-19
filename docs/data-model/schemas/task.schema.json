@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/task.json",
+  "title": "Task",
+  "description": "An atomic unit of work assigned to a single Player.",
+  "type": "object",
+  "required": ["id", "title", "parent_type", "parent_id", "assignee_id", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":              { "type": "string", "format": "uuid" },
+    "title":           { "type": "string", "minLength": 1, "maxLength": 400 },
+    "description":     { "type": ["string", "null"] },
+    "parent_type":     { "type": "string", "enum": ["factory", "project", "squad"] },
+    "parent_id":       { "type": "string", "format": "uuid" },
+    "assignee_id":     { "type": "string", "format": "uuid" },
+    "state":           { "type": "string", "enum": ["todo", "in_progress", "blocked", "done"] },
+    "done_reason":     { "type": ["string", "null"], "enum": ["completed", "canceled", null] },
+    "due_date":        { "type": ["string", "null"], "format": "date" },
+    "estimate_hours":  { "type": ["number", "null"], "minimum": 0 },
+    "done_at":         { "type": ["string", "null"], "format": "date-time" },
+    "created_at":      { "type": "string", "format": "date-time" },
+    "updated_at":      { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
