@@ -1,7 +1,9 @@
-<!--
-  Logo and hero image will be added in milestone M3.
-  Current README is SEO-ready; visual assets follow.
--->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">
+    <img src="docs/assets/logo.svg" alt="SquadFlow" width="128">
+  </picture>
+</p>
 
 <h1 align="center">SquadFlow</h1>
 
@@ -19,6 +21,10 @@
   <img src="https://img.shields.io/badge/version-v1.0%20in%20progress-orange.svg" alt="Version">
   <img src="https://img.shields.io/badge/source_language-English-informational.svg" alt="Source language: English">
   <a href="https://github.com/guilhermej/squadflow-framework/stargazers"><img src="https://img.shields.io/github/stars/guilhermej/squadflow-framework?style=social" alt="GitHub stars"></a>
+</p>
+
+<p align="center">
+  <img src="docs/assets/hero-diagram.svg" alt="SquadFlow three-layer model: Context, Strategy, Execution, People and Knowledge" width="960">
 </p>
 
 ---
