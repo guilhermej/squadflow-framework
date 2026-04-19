@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/factory.json",
+  "title": "Factory",
+  "description": "A unit of continuous production with a permanent kanban.",
+  "type": "object",
+  "required": ["id", "name", "company_id", "squad_id", "manager_id", "kanban_stages", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":            { "type": "string", "format": "uuid" },
+    "name":          { "type": "string", "minLength": 1, "maxLength": 200 },
+    "description":   { "type": ["string", "null"] },
+    "company_id":    { "type": "string", "format": "uuid" },
+    "brand_id":      { "type": ["string", "null"], "format": "uuid" },
+    "squad_id":      { "type": "string", "format": "uuid" },
+    "manager_id":    { "type": "string", "format": "uuid" },
+    "kanban_stages": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 1, "maxLength": 64 }
+    },
+    "state":         { "type": "string", "enum": ["proposed", "active", "paused", "retired"] },
+    "proposed_on":   { "type": ["string", "null"], "format": "date" },
+    "activated_on":  { "type": ["string", "null"], "format": "date" },
+    "paused_on":     { "type": ["string", "null"], "format": "date" },
+    "retired_on":    { "type": ["string", "null"], "format": "date" },
+    "created_at":    { "type": "string", "format": "date-time" },
+    "updated_at":    { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
