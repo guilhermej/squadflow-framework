@@ -79,17 +79,68 @@ Full rationale: [MANIFESTO.md](MANIFESTO.md).
 
 SquadFlow's ontology has **nine first-class entities in four layers**.
 
-| Layer | Entity | One-line |
-|---|---|---|
-| **Context** | [Company](docs/ontology/company.md) | A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes. |
-| Context | [Brand](docs/ontology/brand.md) | A commercial identity owned by a Company, carried to market. |
-| **Strategy** | [OKR](docs/ontology/okr.md) | Objective + Key Results for a period, scored at close. |
-| **Execution** | [Factory](docs/ontology/factory.md) | Continuous production — permanent, kanban-based, weekly-reviewed. |
-| Execution | [Project](docs/ontology/project.md) | Temporary initiative with defined start, scope, end — or absorbed into a Factory. |
-| Execution | [Squad](docs/ontology/squad.md) | Cross-functional team of two or more Players. |
-| Execution | [Task](docs/ontology/task.md) | Atomic unit of work assigned to one Player. |
-| **People** | [Player](docs/ontology/player.md) | The individual who executes. Holds Roles. |
-| **Knowledge** | [Document](docs/ontology/document.md) | Recorded knowledge attached to other entities. |
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th width="80">Icon</th>
+<th>Entity</th>
+<th>One-line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Context</strong></td>
+<td align="center"><img src="docs/assets/icons/company.svg" width="40" alt="Company"></td>
+<td><a href="docs/ontology/company.md"><strong>Company</strong></a></td>
+<td>A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes.</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/assets/icons/brand.svg" width="40" alt="Brand"></td>
+<td><a href="docs/ontology/brand.md"><strong>Brand</strong></a></td>
+<td>A commercial identity owned by a Company, carried to market.</td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td align="center"><img src="docs/assets/icons/okr.svg" width="40" alt="OKR"></td>
+<td><a href="docs/ontology/okr.md"><strong>OKR</strong></a></td>
+<td>Objective + Key Results for a period, scored at close.</td>
+</tr>
+<tr>
+<td rowspan="4"><strong>Execution</strong></td>
+<td align="center"><img src="docs/assets/icons/factory.svg" width="40" alt="Factory"></td>
+<td><a href="docs/ontology/factory.md"><strong>Factory</strong></a></td>
+<td>Continuous production — permanent, kanban-based, weekly-reviewed.</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/assets/icons/project.svg" width="40" alt="Project"></td>
+<td><a href="docs/ontology/project.md"><strong>Project</strong></a></td>
+<td>Temporary initiative with defined start, scope, end — or absorbed into a Factory.</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/assets/icons/squad.svg" width="40" alt="Squad"></td>
+<td><a href="docs/ontology/squad.md"><strong>Squad</strong></a></td>
+<td>Cross-functional team of two or more Players.</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/assets/icons/task.svg" width="40" alt="Task"></td>
+<td><a href="docs/ontology/task.md"><strong>Task</strong></a></td>
+<td>Atomic unit of work assigned to one Player.</td>
+</tr>
+<tr>
+<td><strong>People</strong></td>
+<td align="center"><img src="docs/assets/icons/player.svg" width="40" alt="Player"></td>
+<td><a href="docs/ontology/player.md"><strong>Player</strong></a></td>
+<td>The individual who executes. Holds Roles.</td>
+</tr>
+<tr>
+<td><strong>Knowledge</strong></td>
+<td align="center"><img src="docs/assets/icons/document.svg" width="40" alt="Document"></td>
+<td><a href="docs/ontology/document.md"><strong>Document</strong></a></td>
+<td>Recorded knowledge attached to other entities.</td>
+</tr>
+</tbody>
+</table>
 
 ### Core relationships
 
@@ -285,18 +336,86 @@ For deeper reading — especially if you are implementing the framework as softw
 
 ## Contributing & license
 
-Contributions, translations, and adaptations welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Security policy in [SECURITY.md](SECURITY.md).
+Contributions, translations, and adaptations are welcome.
 
-Licensed under [CC-BY-SA 4.0](LICENSE). You can share, adapt, and build commercial products on top, as long as you credit the origin and keep your derivatives under the same license.
+| Channel | For |
+|---|---|
+| [**Issues**](https://github.com/guilhermej/squadflow-framework/issues) | Bugs, typos, unclear wording, feature requests. |
+| [**Discussions**](https://github.com/guilhermej/squadflow-framework/discussions) | Open questions, design debates, showcases. |
+| [**Pull requests**](https://github.com/guilhermej/squadflow-framework/pulls) | Fixes, refinements, translations. See [CONTRIBUTING.md](CONTRIBUTING.md). |
+| [**Security advisories**](https://github.com/guilhermej/squadflow-framework/security/advisories) | Sensitive disclosures — see [SECURITY.md](SECURITY.md). |
+
+Before contributing, read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+**License:** [CC-BY-SA 4.0](LICENSE). You may share, adapt, and build commercial products on top — as long as you credit the origin and keep your derivatives under the same license. Attributions should point to <https://github.com/guilhermej/squadflow-framework>.
+
+---
+
+## Acknowledgments
+
+SquadFlow stands on the shoulders of frameworks that came before:
+
+- **Andy Grove** and **John Doerr** for the OKR discipline.
+- **Basecamp / Ryan Singer** for Shape Up and the shaping/betting discipline borrowed in the `scoping` state of Projects.
+- **Spotify** for the term *Squad* (used with a narrower meaning in SquadFlow).
+- **Scrum.org** for the Scrum Guide structure, which inspired the editorial tone of this documentation.
+
+The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tested daily against its reality.
+
+---
+
+## Stay connected
+
+<table>
+<tr>
+<td align="center">
+  <a href="https://github.com/guilhermej/squadflow-framework/stargazers">
+    <img src="https://img.shields.io/github/stars/guilhermej/squadflow-framework?style=social" alt="Stars">
+  </a><br>
+  <sub>Star to follow</sub>
+</td>
+<td align="center">
+  <a href="https://github.com/guilhermej/squadflow-framework/watchers">
+    <img src="https://img.shields.io/github/watchers/guilhermej/squadflow-framework?style=social" alt="Watchers">
+  </a><br>
+  <sub>Watch releases</sub>
+</td>
+<td align="center">
+  <a href="https://github.com/guilhermej/squadflow-framework/forks">
+    <img src="https://img.shields.io/github/forks/guilhermej/squadflow-framework?style=social" alt="Forks">
+  </a><br>
+  <sub>Fork and adapt</sub>
+</td>
+</tr>
+</table>
 
 ---
 
 ## Author
 
-**Guilherme Junqueira Soares**
-CEO — Solyd Research
-guilherme[at]solyd[.]com[.]br
+<table>
+<tr>
+<td width="120" align="center">
+  <a href="https://github.com/guilhermej"><img src="https://github.com/guilhermej.png" width="96" height="96" alt="Guilherme" style="border-radius: 50%"></a>
+</td>
+<td>
+  <strong>Guilherme Junqueira Soares</strong><br>
+  CEO — <a href="https://solyd.com.br">Solyd Research</a><br>
+  guilherme[at]solyd[.]com[.]br<br>
+  <a href="https://github.com/guilhermej">@guilhermej</a>
+</td>
+</tr>
+</table>
 
 ---
 
-<sub>SquadFlow is a young framework. v1.0 is the first public release; the ontology may evolve with feedback. Star the repo to follow along.</sub>
+<p align="center">
+  <sub>
+    <strong>SquadFlow is a young framework.</strong> v1.0 is the first public release; the ontology may evolve with feedback.<br>
+    Built with care in Brazil · <a href="CHANGELOG.md">Changelog</a> · <a href="https://github.com/guilhermej/squadflow-framework/releases">Releases</a>
+  </sub>
+</p>
+
+<p align="center">
+  <sub>© 2026 Guilherme Junqueira Soares — Licensed under <a href="LICENSE">CC-BY-SA 4.0</a></sub>
+</p>
