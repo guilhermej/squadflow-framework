@@ -91,7 +91,7 @@
 
   <!-- Layer 3: People & Knowledge -->
   <rect x="20" y="450" width="1160" height="110" rx="8" fill="#e0e7ff" stroke="#c7d2fe" stroke-width="1"/>
-  <text x="40" y="472" font-size="13" font-weight="600" fill="#312e81" letter-spacing="1.2">LAYER 3  ·  PEOPLE & KNOWLEDGE</text>
+  <text x="40" y="472" font-size="13" font-weight="600" fill="#312e81" letter-spacing="1.2">LAYER 3  ·  PEOPLE &amp; KNOWLEDGE</text>
 
   <g transform="translate(440 488)">
     <rect width="130" height="64" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5"/>
