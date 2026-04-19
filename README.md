@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/hero-diagram.svg" alt="SquadFlow three-layer model" width="960">
+  <img src="docs/assets/hero.svg" alt="SquadFlow three-layer model — Context, Strategy, Execution, People and Knowledge" width="960">
 </p>
 
 ---
