@@ -79,68 +79,17 @@ Full rationale: [MANIFESTO.md](MANIFESTO.md).
 
 SquadFlow's ontology has **nine first-class entities in four layers**.
 
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th width="80">Icon</th>
-<th>Entity</th>
-<th>One-line</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2"><strong>Context</strong></td>
-<td align="center"><img src="docs/assets/icons/company.svg" width="40" alt="Company"></td>
-<td><a href="docs/ontology/company.md"><strong>Company</strong></a></td>
-<td>A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes.</td>
-</tr>
-<tr>
-<td align="center"><img src="docs/assets/icons/brand.svg" width="40" alt="Brand"></td>
-<td><a href="docs/ontology/brand.md"><strong>Brand</strong></a></td>
-<td>A commercial identity owned by a Company, carried to market.</td>
-</tr>
-<tr>
-<td><strong>Strategy</strong></td>
-<td align="center"><img src="docs/assets/icons/okr.svg" width="40" alt="OKR"></td>
-<td><a href="docs/ontology/okr.md"><strong>OKR</strong></a></td>
-<td>Objective + Key Results for a period, scored at close.</td>
-</tr>
-<tr>
-<td rowspan="4"><strong>Execution</strong></td>
-<td align="center"><img src="docs/assets/icons/factory.svg" width="40" alt="Factory"></td>
-<td><a href="docs/ontology/factory.md"><strong>Factory</strong></a></td>
-<td>Continuous production — permanent, kanban-based, weekly-reviewed.</td>
-</tr>
-<tr>
-<td align="center"><img src="docs/assets/icons/project.svg" width="40" alt="Project"></td>
-<td><a href="docs/ontology/project.md"><strong>Project</strong></a></td>
-<td>Temporary initiative with defined start, scope, end — or absorbed into a Factory.</td>
-</tr>
-<tr>
-<td align="center"><img src="docs/assets/icons/squad.svg" width="40" alt="Squad"></td>
-<td><a href="docs/ontology/squad.md"><strong>Squad</strong></a></td>
-<td>Cross-functional team of two or more Players.</td>
-</tr>
-<tr>
-<td align="center"><img src="docs/assets/icons/task.svg" width="40" alt="Task"></td>
-<td><a href="docs/ontology/task.md"><strong>Task</strong></a></td>
-<td>Atomic unit of work assigned to one Player.</td>
-</tr>
-<tr>
-<td><strong>People</strong></td>
-<td align="center"><img src="docs/assets/icons/player.svg" width="40" alt="Player"></td>
-<td><a href="docs/ontology/player.md"><strong>Player</strong></a></td>
-<td>The individual who executes. Holds Roles.</td>
-</tr>
-<tr>
-<td><strong>Knowledge</strong></td>
-<td align="center"><img src="docs/assets/icons/document.svg" width="40" alt="Document"></td>
-<td><a href="docs/ontology/document.md"><strong>Document</strong></a></td>
-<td>Recorded knowledge attached to other entities.</td>
-</tr>
-</tbody>
-</table>
+| Layer | Entity | One-line |
+|---|---|---|
+| **Context** | 🏢 [**Company**](docs/ontology/company.md) | A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes. |
+| Context | 🆔 [**Brand**](docs/ontology/brand.md) | A commercial identity owned by a Company, carried to market. |
+| **Strategy** | 🎯 [**OKR**](docs/ontology/okr.md) | Objective + Key Results for a period, scored at close. |
+| **Execution** | 🏭 [**Factory**](docs/ontology/factory.md) | Continuous production — permanent, kanban-based, weekly-reviewed. |
+| Execution | 🚀 [**Project**](docs/ontology/project.md) | Temporary initiative with defined start, scope, end — or absorbed into a Factory. |
+| Execution | ⚔️ [**Squad**](docs/ontology/squad.md) | Cross-functional team of two or more Players. |
+| Execution | ✅ [**Task**](docs/ontology/task.md) | Atomic unit of work assigned to one Player. |
+| **People** | 🏀 [**Player**](docs/ontology/player.md) | The individual who executes. Holds Roles. |
+| **Knowledge** | 📄 [**Document**](docs/ontology/document.md) | Recorded knowledge attached to other entities. |
 
 ### Core relationships
 
