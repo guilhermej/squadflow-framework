@@ -29,52 +29,6 @@
 
 ---
 
-## The three-layer model
-
-```mermaid
-flowchart TB
-  subgraph L0["Layer 0 — Context"]
-    Company
-    Brand
-  end
-  subgraph L1["Layer 1 — Strategy"]
-    OKR
-  end
-  subgraph L2["Layer 2 — Execution"]
-    Factory
-    Project
-    Squad
-    Task
-  end
-  subgraph L3["Layer 3 — People and Knowledge"]
-    Player
-    Document
-  end
-
-  Company --> Brand
-  Company --> Player
-  Company --> Factory
-  Company --> OKR
-  Brand --> OKR
-  Brand --> Project
-  Squad --> OKR
-  Squad --> Factory
-  Squad --> Project
-  Squad --> Player
-  OKR -.-> Factory
-  OKR -.-> Project
-  OKR -.-> Squad
-  Task --> Factory
-  Task --> Project
-  Task --> Squad
-  Task --> Player
-  Document -.-> Company
-  Document -.-> Brand
-  Document -.-> Factory
-  Document -.-> Project
-  Document -.-> Squad
-```
-
 ## Why SquadFlow
 
 Running a company is two different jobs.
