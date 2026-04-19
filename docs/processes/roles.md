@@ -1,112 +1,47 @@
 # Roles
 
-A **Role** is a named responsibility. Roles are held by Players. One Player can hold several Roles at once. Roles are not job titles and are not compensation tiers.
+Named responsibilities held by Players. One Player can hold several Roles. Roles are not job titles, not compensation tiers, and not HR reporting lines.
 
-SquadFlow v1.0 has **six canonical Roles**. Every approval in the framework names a Role, not a person, so the system survives people changing jobs and the organization changing shape.
+SquadFlow v1.0 has **six canonical Roles**. Every approval in the framework names a Role, not a person — so governance survives people changing jobs.
 
 ## The six Roles
 
-### Player
+| Role | Scope | Responsibility | Held by |
+|---|---|---|---|
+| **Player** | individual | Executes Tasks; participates in Squad ceremonies; surfaces blockers. | Every Player by default. |
+| **Squad Lead** | 1 Squad | Coordinates the Squad; ensures cadence runs (Sync, Debriefing); surfaces Squad-level impediments. | One Player per Squad. Mandatory. |
+| **Factory Manager** | 1 Factory | Owns the kanban — stages, throughput, manual. Runs the weekly Factory Review. Decides what enters the board. | One Player per Factory. Mandatory. |
+| **Project Owner** | 1 Project | Accountable for the Project's delivery. Owns scope, timeline, close decision. | One Player per Project once in `scoping` or later. |
+| **OKR Sponsor** | N OKRs | Shapes the Objective, defines KRs, commits, defends, scores at close. | Typically Org Steward (company/brand OKRs) or Squad Lead (squad OKRs). |
+| **Org Steward** | 1 Company / Brand | Overall health of the entity. Approves state transitions (create/retire Factory, cancel/absorb Project, dissolve Squad). Does **not** micromanage. | Typically a founder, CEO, COO, or GM. |
 
-**Scope:** individual.
+## Signals and antipatterns
 
-**Responsibility:** execute Tasks assigned to them, participate in Squad ceremonies, surface blockers.
-
-**Held by:** every Player in the organization, by default.
-
-**Signals of doing this well:** Tasks completed on schedule, blockers surfaced early, active participation in Squad Sync and Debriefing.
-
-**Antipatterns:** treating a Player as a ticket factory (no ownership), or treating them as a cost center (not a contributor).
-
----
-
-### Squad Lead
-
-**Scope:** one Squad.
-
-**Responsibility:** coordinates the Squad, ensures cadence (Squad Sync, Debriefing, handoffs) happens, surfaces Squad-level impediments to the Org Steward, proposes new Factories or Projects the Squad should take on.
-
-**Held by:** one Player per Squad. Mandatory.
-
-**Signals of doing this well:** Squad Sync is consistent and useful; members know what they are working on and why; new work is either accepted deliberately or declined explicitly.
-
-**Antipatterns:** becoming a tech lead on every Task (micromanagement); being an empty hat with no visible coordination.
-
----
-
-### Factory Manager
-
-**Scope:** one Factory.
-
-**Responsibility:** owns the kanban — its stages, its throughput, its documentation. Runs the weekly Factory Review. Proposes improvements (often as new Projects). Has final say on what enters the kanban.
-
-**Held by:** one Player per Factory. Mandatory.
-
-**Signals of doing this well:** the Factory Review is crisp and surface-able; throughput metrics are visible; the operating manual is current; stuck cards are rare.
-
-**Antipatterns:** running the Factory without a Review (invisible work); accepting every card (no filter); failing to retire stages that are no longer useful.
-
----
-
-### Project Owner
-
-**Scope:** one Project, for the duration of the Project.
-
-**Responsibility:** accountable for the Project's delivery. Owns the scope, negotiates the timeline, decides cancellation or absorption, records the decision log, runs the Kickoff and Closing ceremonies.
-
-**Held by:** one Player per Project. Mandatory for Projects in `scoping` or later states.
-
-**Signals of doing this well:** scope is clear and stable; weekly status is honest (not color-coded lies); `delivery` happens on schedule and cleanly; close decision is explicit.
-
-**Antipatterns:** letting scope creep silently; delaying the close decision indefinitely; absorbing a Project without creating a Factory.
-
----
-
-### OKR Sponsor
-
-**Scope:** one or more OKRs.
-
-**Responsibility:** shapes the Objective, defines the Key Results, commits the OKR, defends it throughout the period, scores it at close. Keeps the OKR honest — does not game the score.
-
-**Held by:** typically an Org Steward (for company or brand OKRs) or a Squad Lead (for squad OKRs). One Sponsor per OKR.
-
-**Signals of doing this well:** the Objective is unambiguous; KRs are outcomes, not activities; scoring at close is honest; missed OKRs are retrospected.
-
-**Antipatterns:** KRs as a to-do list; lenient scoring for committed OKRs; dozens of OKRs instead of a focused few.
-
----
-
-### Org Steward
-
-**Scope:** one Company or one Brand.
-
-**Responsibility:** overall health of the entity. Approves creation and retirement of Factories, cancellation or absorption of Projects, formation and dissolution of Squads. Sponsors company- or brand-level OKRs. Does **not** micromanage — approves transitions of state, not Tasks.
-
-**Held by:** typically a founder, CEO, COO, or a GM for brand-level stewardship. One Steward per Company (or per Brand, when brand-level stewardship is delegated).
-
-**Signals of doing this well:** transitions happen deliberately and with decision logs; the portfolio of Factories and Projects stays aligned with strategy; Squad Leads and Factory Managers escalate freely.
-
-**Antipatterns:** approving every Task (micromanagement); approving nothing (rubber-stamp); letting stale Factories or zombie Projects linger.
+- **Squad Lead** — Cadence is consistent and useful; work is either accepted deliberately or declined explicitly. *Antipattern:* empty hat with no visible coordination, or tech-leading every Task.
+- **Factory Manager** — Factory Review is crisp; throughput metrics are visible; operating manual is current. *Antipattern:* running the Factory without a Review.
+- **Project Owner** — Scope is clear and stable; close decision is explicit. *Antipattern:* letting scope creep silently; delaying close indefinitely.
+- **OKR Sponsor** — Objective is unambiguous; KRs are outcomes not activities; scoring at close is honest. *Antipattern:* KRs as a to-do list; lenient scoring for committed OKRs.
+- **Org Steward** — Transitions happen deliberately with decision logs; portfolio stays aligned with strategy. *Antipattern:* approving every Task (micromanagement) or approving nothing (rubber-stamp).
 
 ## How Roles stack
 
-One Player can hold several Roles. Examples:
+One Player, several Roles:
 
-- A founder in a small company: `org_steward` + `okr_sponsor` + `factory_manager` for a sales factory.
-- A senior engineer: `player` + `squad_lead` + `project_owner` for a migration Project.
-- A COO of a multi-brand group: `org_steward` (company-wide) + `okr_sponsor` for the company OKRs + Brand Stewardship delegated elsewhere.
+- A founder in a small company: `org_steward` + `okr_sponsor` + `factory_manager` for one key Factory.
+- A senior engineer: `player` + `squad_lead` + `project_owner` for a specific Project.
+- A COO of a multi-brand group: `org_steward` for the Company + `okr_sponsor` for company OKRs; brand-level stewardship delegated elsewhere.
 
-Roles are encoded in the Player's `role_slugs` attribute (see [`../ontology/player.md`](../ontology/player.md)).
+Roles are encoded in the Player's `role_slugs` attribute.
 
 ## Roles versus job titles
 
 - *Senior Backend Engineer* is a **job title**. Not a SquadFlow concept.
-- *Player* is a **Role** in SquadFlow. Often held by people with engineering titles, but the two are independent.
+- *Squad Lead* is a **Role**. Independent of title, compensation, or reporting.
 
-Promotions, compensation, and HR reporting structures live outside the ontology. SquadFlow cares only which Roles a Player currently holds.
+Promotions, compensation, and org-chart reporting live outside the ontology.
 
 ## See also
 
-- [Player entity](../ontology/player.md) — the `role_slugs` attribute.
+- [Player ontology](../ontology/player.md) — the `role_slugs` attribute.
 - [Governance](governance.md) — which Role approves what.
 - [Ceremonies](ceremonies.md) — which Role convenes each ceremony.
