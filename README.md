@@ -27,6 +27,21 @@
   <img src="docs/assets/hero.svg" alt="SquadFlow three-layer model — Context, Strategy, Execution, People and Knowledge" width="960">
 </p>
 
+> [!IMPORTANT]
+> **The whole point in one sentence:**
+> Continuous work and change work are different disciplines, and most frameworks pretend they aren't.
+> SquadFlow keeps them apart — and names the moment a successful change becomes a routine.
+
+## Is SquadFlow for you?
+
+| ✅ Yes, if you are… | ❌ No, if you are… |
+|---|---|
+| A founder, COO, or chief of staff at a **10–200 person company**. | A team of 5. Just talk to each other. |
+| Running **more than one brand, product line, or business unit**. | A single Scrum team shipping one product — keep Scrum. |
+| Tired of duct-taping Scrum + Kanban + OKRs + "process" together. | Already 500+ people deep in SAFe — switching costs are real. |
+| Willing to pay the small tax of **naming things explicitly**. | Allergic to ontology. |
+| Planning to eventually build software *on top of* your operating model. | Looking for a certification track. None here. |
+
 ## Contents
 
 1. [Why SquadFlow](#why-squadflow)
@@ -40,8 +55,9 @@
 9. [How SquadFlow compares](#how-squadflow-compares)
 10. [Data model](#data-model)
 11. [Who uses it](#who-uses-it)
-12. [Full reference](#full-reference)
-13. [Contributing & license](#contributing--license)
+12. [Ready to try it?](#ready-to-try-it)
+13. [Full reference](#full-reference)
+14. [Contributing & license](#contributing--license)
 
 ## Why SquadFlow
 
@@ -49,60 +65,65 @@ Running a company is two different jobs.
 
 **One is keeping the business alive** — closing deals every week, shipping content, answering support, processing payroll. The work never stops. The goal is rhythm.
 
-**The other is changing the business** — launching a new product, migrating a system, entering a new market. The work has a beginning and an end. The goal is delivery.
+**The other is changing the business** — launching a product, migrating a system, entering a new market. The work has a beginning and an end. The goal is delivery.
 
-Most frameworks pick one side and pretend the other is a special case. Scrum optimizes change into sprints. Kanban optimizes flow and calls everything a ticket. SAFe tries to do both and collapses under its own weight. SquadFlow keeps them distinct: **Factories** handle continuous operations; **Projects** drive change; **Squads** run both; **OKRs** align them to strategy. The distinction is formal, not rhetorical — encoded in lifecycles, data schemas, and governance rules.
+Take a sales pipeline. `Prospect → Qualified → Proposal → Won`. It never empties. Next week there will be new prospects, whether you planned for them or not. This is a **Factory**. Forcing it into two-week sprints is a category error.
 
-If this framing clicks for you, read on. If it does not, no framework will help; the problem is somewhere else.
+Now take *"migrate our billing system from a custom codebase to Stripe"*. It has a scope, a start, and a finish. When it's done, it's done — Stripe runs itself. This is a **Project**. It would be absurd to hand it to the sales team's kanban.
 
-SquadFlow is for **founders, COOs, and chiefs of staff at scale-ups and multi-brand groups** — 10 to 200 people, more than one brand or business unit. If you are a team of five, you do not need a framework. If you are running a pure engineering shop with one Scrum team, keep Scrum.
+Most frameworks pick one side and pretend the other is a special case. Scrum optimizes change into sprints. Kanban optimizes flow and calls everything a ticket. SAFe tries to do both and collapses under its own weight. SquadFlow keeps them distinct from day one — in the lifecycles, in the data schemas, in the governance rules.
+
+> [!TIP]
+> **The trick most frameworks miss:** when a Project succeeds and produces something that *must* be operated forever (a partner portal, a new hiring pipeline, a content channel), SquadFlow has a dedicated state for that transition — `absorbed`. The Project closes; a new Factory is born. No work becomes invisible. No ownership evaporates.
+
+If this framing clicks for you, read on. If it doesn't, no framework will fix the problem — the issue is somewhere else.
 
 ## The five principles
 
 1. **Factories run your business. Projects change it.** A Factory is permanent; a Project has a start, a scope, and an end.
-2. **Every entity has a single owner.** Never a committee. If no one is personally accountable, the thing drifts.
-3. **States are explicit.** "Done" is not a state. Ambiguity about status is the leading cause of stalled work.
-4. **Strategy and execution share one model.** OKRs are first-class citizens in the same graph as Factories, Projects, and Squads — not a separate tool.
-5. **Open by default.** [CC-BY-SA 4.0](LICENSE). Adapt, translate, build on it — credit the origin, keep derivatives open.
+2. **Every entity has a single owner.** Never a committee. If no one is personally accountable, the thing drifts — that's a physics law, not an opinion.
+3. **States are explicit.** "Done" is not a state. "In progress" is not a state. A state is one of a short, finite list, with documented entry and exit conditions. Ambiguity about status is the leading cause of stalled work, and stalled work is silent.
+4. **Strategy and execution share one model.** OKRs are first-class citizens in the same graph as Factories, Projects, and Squads — not a separate tool maintained by a separate team.
+5. **Open by default.** [CC-BY-SA 4.0](LICENSE). Adapt, translate, build on it. Credit the origin. Keep derivatives open.
 
 Full rationale: [MANIFESTO.md](MANIFESTO.md).
 
 ## The nine entities
 
-SquadFlow's ontology has **nine first-class entities in four layers**.
+SquadFlow's ontology has **nine first-class entities in four layers**. No more, no less.
 
-### Context — where work happens
+### 🌍 Context — where work happens
 
-- 🏢 **[Company](docs/ontology/company.md)** — A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes.
-- 🆔 **[Brand](docs/ontology/brand.md)** — A commercial identity owned by a Company, carried to market.
+- 🏢 **[Company](docs/ontology/company.md)** — A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes. Example: *Guardsi Tecnologia LTDA*.
+- 🆔 **[Brand](docs/ontology/brand.md)** — A commercial identity owned by a Company. Example: *Solyd*, *Caveiratech* — both carried by the same Company.
 
-### Strategy — why work happens
+### 🎯 Strategy — why work happens
 
-- 🎯 **[OKR](docs/ontology/okr.md)** — Objective and Key Results for a period, scored at close.
+- 🎯 **[OKR](docs/ontology/okr.md)** — Objective and Key Results for a period, scored at close. Example: *"Become the preferred billing platform for LATAM SaaS"* with 2–4 measurable KRs.
 
-### Execution — how work happens
+### ⚙️ Execution — how work happens
 
-- 🏭 **[Factory](docs/ontology/factory.md)** — Continuous production. Permanent, kanban-based, weekly-reviewed.
-- 🚀 **[Project](docs/ontology/project.md)** — Temporary initiative with defined start, scope, and end — or absorbed into a Factory.
-- ⚔️ **[Squad](docs/ontology/squad.md)** — Cross-functional team of two or more Players.
-- ✅ **[Task](docs/ontology/task.md)** — Atomic unit of work assigned to one Player.
+- 🏭 **[Factory](docs/ontology/factory.md)** — Continuous production. Example: *B2B Sales Factory* with stages `Prospect → Qualified → Proposal Sent → In Negotiation → Won`.
+- 🚀 **[Project](docs/ontology/project.md)** — Temporary initiative. Example: *Billing Migration to Stripe* — starts Feb, ends May, closes with `delivered`.
+- ⚔️ **[Squad](docs/ontology/squad.md)** — Cross-functional team. Example: *Platform Squad* of 6 (3 engineers, 1 designer, 1 PM, 1 Lead) running one Factory + one Project.
+- ✅ **[Task](docs/ontology/task.md)** — Atomic unit of work. Example: *"Write the Stripe connector module"*, assigned to Ana, blocked on prod access, due May 10.
 
-### People and Knowledge — who and what persists
+### 🏀 People and Knowledge — who and what persists
 
-- 🏀 **[Player](docs/ontology/player.md)** — The individual who executes. Holds Roles.
-- 📄 **[Document](docs/ontology/document.md)** — Recorded knowledge attached to other entities.
+- 🏀 **[Player](docs/ontology/player.md)** — The individual. Example: Ana joins as `candidate`, becomes `active` on day 1, promoted to Squad Lead six months later.
+- 📄 **[Document](docs/ontology/document.md)** — Recorded knowledge. Example: *Sales Factory Operating Manual*, owned by the Factory Manager, flagged `outdated` if unreviewed for 6 months.
 
 ### Core relationships
 
 - A **Company** owns many **Brands**, employs **Players**, runs **Factories**, and scopes **OKRs** and **Projects**.
 - A **Brand** can scope its own **OKRs**, **Projects**, and **Factories**.
 - A **Squad** is responsible for running **Factories** and executing **Projects**. It can also have squad-level **OKRs**.
-- Every **Task** belongs to exactly one **Factory**, **Project**, or **Squad**, and is assigned to exactly one **Player**.
+- Every **Task** belongs to exactly one **Factory**, **Project**, or **Squad**, assigned to exactly one **Player**.
 - **OKRs** are contributed to by **Factories**, **Projects**, and **Squads** (many-to-many).
 - A successful **Project** producing continuous output is *absorbed* into a new **Factory** at close.
 - **Documents** attach to any entity for knowledge persistence.
 
-Full schema with cardinalities: [docs/data-model/er-diagram.svg](docs/data-model/er-diagram.svg).
+Full schema with cardinalities: [`docs/data-model/er-diagram.svg`](docs/data-model/er-diagram.svg).
 
 ## Lifecycles at a glance
 
@@ -120,7 +141,8 @@ Every entity has a finite state machine. Full diagrams in [`docs/lifecycles/`](d
 | Player | `candidate → active ⇄ on_leave → offboarded` | Offboarding reassigns Tasks and drops Squad membership; record preserved. |
 | Document | `draft → in_review → published ⇄ outdated → archived` | `outdated` is a first-class flag — stale docs are marked, not hidden. |
 
-The `absorbed` transition on Project is the most important motion in SquadFlow: **a successful Project that must be operated continuously becomes a new Factory**.
+> [!NOTE]
+> The `absorbed` transition is the most important motion in SquadFlow. When a successful Project has to be operated continuously, it becomes a new Factory — with a new Manager, a new kanban, and a decision-log entry recording why.
 
 ## Cadence stack
 
@@ -136,13 +158,14 @@ The `absorbed` transition on Project is the most important motion in SquadFlow: 
 
 Plus ad-hoc ceremonies triggered by lifecycle transitions (Project Kickoff, Project Closing, Squad Formation, Squad Dissolution, Factory Retirement).
 
-Skip any level that does not fit your size. A 20-person company does not need a monthly Portfolio Review. Add ceremonies when you feel the gap, not before.
+> [!TIP]
+> Don't run all of these on day one. A 20-person company survives fine on daily Debriefing + weekly Squad Sync + quarterly OKR Review. Add more when you feel the gap — not because the framework says so.
 
 Detail: [`docs/processes/cadences.md`](docs/processes/cadences.md) · [`docs/processes/ceremonies.md`](docs/processes/ceremonies.md).
 
 ## Roles
 
-Roles are named responsibilities held by Players. One Player can hold several Roles simultaneously. Roles are not job titles.
+Roles are named responsibilities held by Players. One Player can hold several Roles. Roles are not job titles, not compensation tiers.
 
 | Role | Scope | Responsibility |
 |---|---|---|
@@ -184,18 +207,23 @@ Full RACI matrix and decision-log pattern: [`docs/processes/governance.md`](docs
 
 ## Quickstart
 
-Use SquadFlow in **15 minutes**. No software to install. Runs on Notion, a whiteboard, or whatever you already use.
+<p>
+  <img src="https://img.shields.io/badge/⏱_15_min-lightgray"> <img src="https://img.shields.io/badge/🧩_no_install-lightgray"> <img src="https://img.shields.io/badge/📝_works_on_Notion,_paper,_anything-lightgray">
+</p>
 
 1. **Create one Company and one Brand.** Even a single-brand startup creates both — they diverge the day you grow.
-2. **Identify your Factories and your Projects.** A sales pipeline is a Factory. Building a new feature is a Project.
-3. **Pick 1–3 OKRs for the quarter.** Objective + 2–4 measurable Key Results. Assign a Sponsor to each.
+2. **Identify your Factories and your Projects.** A sales pipeline is a Factory. Building a new feature is a Project. If it never ends, it's a Factory. If it has a due date, it's a Project.
+3. **Pick 1–3 OKRs for the quarter.** Objective + 2–4 measurable Key Results. Assign a Sponsor to each. Fewer than 1 means you're coasting; more than 3 means nothing is a priority.
 4. **Form your Squads.** Cross-functional, 2+ Players, one Squad Lead. Assign Factories and Projects.
-5. **Set your cadence.** Daily Debriefing, weekly Squad Sync, weekly Factory Review, quarterly OKR Setting/Review.
+5. **Set your cadence.** Daily Debriefing, weekly Squad Sync, weekly Factory Review, quarterly OKR Setting/Review. Everything else is optional at first.
 
-Within a week, hit a question not obviously answered? Find it in [`docs/ontology/`](docs/ontology/) (what is this thing?), [`docs/lifecycles/`](docs/lifecycles/) (what state can it be in?), or [`docs/processes/governance.md`](docs/processes/governance.md) (who approves it?).
+> [!TIP]
+> Hit a question not obviously answered? Three places to look:
+> - **What is this thing?** → [`docs/ontology/`](docs/ontology/)
+> - **What state can it be in?** → [`docs/lifecycles/`](docs/lifecycles/)
+> - **Who approves it?** → [`docs/processes/governance.md`](docs/processes/governance.md)
 
-Step-by-step walkthrough: [`docs/getting-started.md`](docs/getting-started.md).
-Downloadable Notion template: ships with v1.0 (see [`templates/notion/`](templates/notion/)).
+Step-by-step walkthrough: [`docs/getting-started.md`](docs/getting-started.md). Downloadable Notion template ships with v1.0 in [`templates/notion/`](templates/notion/).
 
 ## How SquadFlow compares
 
@@ -212,11 +240,12 @@ Downloadable Notion template: ships with v1.0 (see [`templates/notion/`](templat
 
 Detailed per-framework comparisons: [`docs/comparisons/`](docs/comparisons/).
 
-**When to pick something else:**
+**When to pick something else, honestly:**
 
-- **Team of 5** → no framework. Talk to each other.
-- **Single Scrum team running one product** → Scrum alone. Do not adopt SquadFlow on top.
-- **Enterprise with 500+ engineers already in SAFe** → stay. Switching has real cost.
+- **Team of 5** → no framework. Frameworks are for when communication starts breaking. You're not there yet.
+- **Single Scrum team, one product** → Scrum. Seriously, stop adding things.
+- **Enterprise, 500+ engineers, already committed to SAFe** → stay. Switching isn't free. SquadFlow doesn't scale to your shape anyway.
+- **Looking for certifications and a coach network** → SAFe or Scrum.org. SquadFlow offers neither and doesn't plan to.
 
 ## Data model
 
@@ -233,9 +262,16 @@ datamodel-codegen --input docs/data-model/schemas/project.schema.json \
 
 Source: [`docs/data-model/`](docs/data-model/) — conventions, ER diagram, 9 schemas, test fixtures.
 
+> [!NOTE]
+> Most management frameworks ship as prose. SquadFlow ships as prose *and* a machine-readable contract. That's deliberate — we expect someone to build proprietary software on top of this, and we'd rather they start from valid schemas than from paraphrased opinions.
+
 ## Who uses it
 
-**Grupo Solyd** — the framework was born from the day-to-day operation of:
+<p align="center">
+<strong>1 Group</strong> · <strong>2 Companies</strong> · <strong>5 Brands</strong> · <strong>used daily since 2024</strong>
+</p>
+
+**[Grupo Solyd](https://solyd.com.br)** — the framework was born here, stress-tested here, and is the reason every decision in v1.0 is opinionated the way it is.
 
 - **Guardsi** — B2B cybersecurity services and education.
 - **Mindz** — SaaS platforms for infoproduct businesses.
@@ -245,7 +281,30 @@ Source: [`docs/data-model/`](docs/data-model/) — conventions, ER diagram, 9 sc
 
 A detailed case study ships in [`examples/multi-brand-group.md`](examples/multi-brand-group.md) with v1.0.
 
-If you are running SquadFlow in your own organization, open an Issue or PR to add yourself here.
+> [!NOTE]
+> Running SquadFlow in your own organization? Open an Issue or PR to add yourself here. Credibility compounds.
+
+## Ready to try it?
+
+<table>
+<tr>
+<td align="center" width="33%">
+  <a href="https://github.com/guilhermej/squadflow-framework">⭐</a><br>
+  <strong><a href="https://github.com/guilhermej/squadflow-framework">Star the repo</a></strong><br>
+  <sub>Follow along as v1.0 ships</sub>
+</td>
+<td align="center" width="33%">
+  <a href="templates/notion/">📥</a><br>
+  <strong><a href="templates/notion/">Download Notion template</a></strong><br>
+  <sub>Import, populate, you're running it (v1.0)</sub>
+</td>
+<td align="center" width="33%">
+  <a href="MANIFESTO.md">📖</a><br>
+  <strong><a href="MANIFESTO.md">Read the Manifesto</a></strong><br>
+  <sub>The whole thing in 400 words</sub>
+</td>
+</tr>
+</table>
 
 ## Full reference
 
@@ -285,10 +344,10 @@ SquadFlow stands on the shoulders of frameworks that came before:
 
 - **Andy Grove** and **John Doerr** for the OKR discipline.
 - **Basecamp / Ryan Singer** for Shape Up and the shaping/betting discipline borrowed in the `scoping` state of Projects.
-- **Spotify** for the term *Squad* (used with a narrower meaning in SquadFlow).
-- **Scrum.org** for the Scrum Guide structure, which inspired the editorial tone of this documentation.
+- **Spotify** for the term *Squad* (used here with a narrower meaning — and yes, we know Spotify itself doesn't use the "Spotify Model" anymore).
+- **Scrum.org** for the Scrum Guide, whose editorial discipline inspired this documentation's tone.
 
-The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tested daily against its reality.
+The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tested daily against its reality. If it breaks there, it gets fixed here.
 
 ---
 
