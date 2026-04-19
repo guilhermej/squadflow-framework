@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/squad.json",
+  "title": "Squad",
+  "description": "A cross-functional team of two or more Players.",
+  "type": "object",
+  "required": ["id", "name", "company_id", "lead_id", "member_ids", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":            { "type": "string", "format": "uuid" },
+    "name":          { "type": "string", "minLength": 1, "maxLength": 200 },
+    "description":   { "type": ["string", "null"] },
+    "company_id":    { "type": "string", "format": "uuid" },
+    "brand_ids": {
+      "type": "array",
+      "items": { "type": "string", "format": "uuid" },
+      "uniqueItems": true
+    },
+    "lead_id":       { "type": "string", "format": "uuid" },
+    "member_ids": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "format": "uuid" },
+      "uniqueItems": true
+    },
+    "state":         { "type": "string", "enum": ["forming", "active", "on_hold", "dissolving", "dissolved"] },
+    "formed_on":     { "type": ["string", "null"], "format": "date" },
+    "dissolved_on":  { "type": ["string", "null"], "format": "date" },
+    "created_at":    { "type": "string", "format": "date-time" },
+    "updated_at":    { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

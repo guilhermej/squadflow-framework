@@ -1,0 +1,21 @@
+{
+  "id": "e1f2a3b4-c5d6-4789-e012-3456789abcde",
+  "name": "Platform",
+  "description": "Runs core platform services and billing.",
+  "company_id": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+  "brand_ids": [],
+  "lead_id": "c1d2e3f4-a5b6-4789-c012-3456789abcde",
+  "member_ids": [
+    "c1d2e3f4-a5b6-4789-c012-3456789abcde",
+    "c1d2e3f4-a5b6-4789-c012-3456789abcdf",
+    "c1d2e3f4-a5b6-4789-c012-3456789abce0",
+    "c1d2e3f4-a5b6-4789-c012-3456789abce1",
+    "c1d2e3f4-a5b6-4789-c012-3456789abce2",
+    "c1d2e3f4-a5b6-4789-c012-3456789abce3"
+  ],
+  "state": "active",
+  "formed_on": "2025-04-01",
+  "dissolved_on": null,
+  "created_at": "2025-04-01T09:00:00Z",
+  "updated_at": "2026-04-19T10:00:00Z"
+}

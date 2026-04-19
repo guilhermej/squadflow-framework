@@ -1,0 +1,10 @@
+{
+  "id": "e1f2a3b4-c5d6-4789-e012-3456789abcde",
+  "name": "Solo",
+  "company_id": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+  "lead_id": "c1d2e3f4-a5b6-4789-c012-3456789abcde",
+  "member_ids": ["c1d2e3f4-a5b6-4789-c012-3456789abcde"],
+  "state": "active",
+  "created_at": "2025-04-01T09:00:00Z",
+  "updated_at": "2026-04-19T10:00:00Z"
+}
