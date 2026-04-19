@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/okr.json",
+  "title": "OKR",
+  "description": "An Objective paired with measurable Key Results for a defined period.",
+  "type": "object",
+  "required": ["id", "objective", "key_results", "period", "commitment", "owner_id", "company_id", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":            { "type": "string", "format": "uuid" },
+    "objective":     { "type": "string", "minLength": 1, "maxLength": 500 },
+    "key_results": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["name", "unit", "baseline", "target"],
+        "properties": {
+          "name":     { "type": "string", "minLength": 1, "maxLength": 300 },
+          "unit":     { "type": "string", "minLength": 1, "maxLength": 32 },
+          "baseline": { "type": "number" },
+          "target":   { "type": "number" },
+          "current":  { "type": ["number", "null"] },
+          "score":    { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "period":        { "type": "string", "minLength": 1, "maxLength": 32 },
+    "commitment":    { "type": "string", "enum": ["committed", "aspirational"] },
+    "owner_id":      { "type": "string", "format": "uuid" },
+    "company_id":    { "type": "string", "format": "uuid" },
+    "brand_id":      { "type": ["string", "null"], "format": "uuid" },
+    "squad_id":      { "type": ["string", "null"], "format": "uuid" },
+    "state":         { "type": "string", "enum": ["draft", "active", "in_review", "closed"] },
+    "close_outcome": { "type": ["string", "null"], "enum": ["achieved", "partially_met", "missed", null] },
+    "score":         { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "contributing_factory_ids": {
+      "type": "array",
+      "items": { "type": "string", "format": "uuid" },
+      "uniqueItems": true
+    },
+    "contributing_project_ids": {
+      "type": "array",
+      "items": { "type": "string", "format": "uuid" },
+      "uniqueItems": true
+    },
+    "contributing_squad_ids": {
+      "type": "array",
+      "items": { "type": "string", "format": "uuid" },
+      "uniqueItems": true
+    },
+    "created_at":    { "type": "string", "format": "date-time" },
+    "updated_at":    { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
