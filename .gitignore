@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Environment
+.env
+.env.local
+
+# Build artifacts
+dist/
+build/
+
+# Notion sync state (if cached locally)
+.notion-sync-cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

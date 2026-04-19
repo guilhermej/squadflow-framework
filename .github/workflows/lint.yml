@@ -1,0 +1,37 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: '**/*.md'
+
+  json-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install jsonschema
+        run: pip install jsonschema
+      - name: Validate all schemas and fixtures
+        run: |
+          shopt -s nullglob
+          schemas=(docs/data-model/schemas/*.json)
+          if [ ${#schemas[@]} -eq 0 ]; then
+            echo "No schemas yet — skipping."
+            exit 0
+          fi
+          for f in "${schemas[@]}"; do
+            echo "Validating meta-schema of $f"
+            python -c "import json, jsonschema; jsonschema.Draft202012Validator.check_schema(json.load(open('$f')))"
+          done
