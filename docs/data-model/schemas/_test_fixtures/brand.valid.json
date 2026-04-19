@@ -1,0 +1,12 @@
+{
+  "id": "b1c2d3e4-f5a6-4789-b012-3456789abcde",
+  "name": "Helios",
+  "company_ids": ["a1b2c3d4-e5f6-4789-a012-3456789abcde"],
+  "tagline": "Billing for LATAM SaaS",
+  "website": "https://helios.co",
+  "state": "active",
+  "launched_on": "2019-06-15",
+  "archived_on": null,
+  "created_at": "2026-04-19T10:00:00Z",
+  "updated_at": "2026-04-19T10:00:00Z"
+}

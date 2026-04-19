@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/brand.json",
+  "title": "Brand",
+  "description": "A commercial identity owned by one or more Companies.",
+  "type": "object",
+  "required": ["id", "name", "company_ids", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":           { "type": "string", "format": "uuid" },
+    "name":         { "type": "string", "minLength": 1, "maxLength": 200 },
+    "company_ids":  {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "format": "uuid" }
+    },
+    "tagline":      { "type": ["string", "null"], "maxLength": 300 },
+    "website":      { "type": ["string", "null"], "format": "uri" },
+    "state":        { "type": "string", "enum": ["active", "archived"] },
+    "launched_on":  { "type": ["string", "null"], "format": "date" },
+    "archived_on":  { "type": ["string", "null"], "format": "date" },
+    "created_at":   { "type": "string", "format": "date-time" },
+    "updated_at":   { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
