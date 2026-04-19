@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/document.json",
+  "title": "Document",
+  "description": "Recorded knowledge attached to one or more other entities.",
+  "type": "object",
+  "required": ["id", "title", "owner_id", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":             { "type": "string", "format": "uuid" },
+    "title":          { "type": "string", "minLength": 1, "maxLength": 400 },
+    "owner_id":       { "type": "string", "format": "uuid" },
+    "body_url":       { "type": ["string", "null"], "format": "uri" },
+    "body_markdown":  { "type": ["string", "null"] },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entity_type", "entity_id"],
+        "properties": {
+          "entity_type": {
+            "type": "string",
+            "enum": ["company", "brand", "okr", "factory", "project", "squad", "task", "player", "document"]
+          },
+          "entity_id": { "type": "string", "format": "uuid" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "state":          { "type": "string", "enum": ["draft", "in_review", "published", "outdated", "archived"] },
+    "version":        { "type": ["string", "null"], "maxLength": 50 },
+    "published_at":   { "type": ["string", "null"], "format": "date-time" },
+    "outdated_at":    { "type": ["string", "null"], "format": "date-time" },
+    "archived_at":    { "type": ["string", "null"], "format": "date-time" },
+    "created_at":     { "type": "string", "format": "date-time" },
+    "updated_at":     { "type": "string", "format": "date-time" }
+  },
+  "anyOf": [
+    { "required": ["body_url"], "properties": { "body_url": { "type": "string" } } },
+    { "required": ["body_markdown"], "properties": { "body_markdown": { "type": "string" } } }
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "id": "d1e2f3a4-b5c6-4789-d012-3456789abcde",
+  "title": "Sales Factory Operating Manual",
+  "owner_id": "c1d2e3f4-a5b6-4789-c012-3456789abcde",
+  "body_url": "https://www.notion.so/helios/sales-factory-manual",
+  "body_markdown": null,
+  "attachments": [
+    {
+      "entity_type": "factory",
+      "entity_id": "a2b3c4d5-e6f7-4789-a012-3456789abcde"
+    }
+  ],
+  "state": "published",
+  "version": "v2.3",
+  "published_at": "2026-01-15T14:00:00Z",
+  "outdated_at": null,
+  "archived_at": null,
+  "created_at": "2025-06-01T10:00:00Z",
+  "updated_at": "2026-01-15T14:00:00Z"
+}
