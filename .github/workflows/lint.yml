@@ -25,13 +25,45 @@ jobs:
         run: pip install jsonschema
       - name: Validate all schemas and fixtures
         run: |
-          shopt -s nullglob
-          schemas=(docs/data-model/schemas/*.json)
-          if [ ${#schemas[@]} -eq 0 ]; then
-            echo "No schemas yet — skipping."
-            exit 0
-          fi
-          for f in "${schemas[@]}"; do
-            echo "Validating meta-schema of $f"
-            python -c "import json, jsonschema; jsonschema.Draft202012Validator.check_schema(json.load(open('$f')))"
-          done
+          python <<'PY'
+          import json, pathlib, sys
+          from jsonschema import Draft202012Validator, ValidationError
+
+          schemas_dir = pathlib.Path('docs/data-model/schemas')
+          fixtures_dir = schemas_dir / '_test_fixtures'
+          errors = []
+          count = 0
+
+          for schema_path in sorted(schemas_dir.glob('*.schema.json')):
+              entity = schema_path.stem.replace('.schema', '')
+              count += 1
+              schema = json.load(open(schema_path))
+              try:
+                  Draft202012Validator.check_schema(schema)
+              except Exception as e:
+                  errors.append(f'{entity}: meta-schema invalid: {e}')
+                  continue
+              validator = Draft202012Validator(schema)
+              valid_f = fixtures_dir / f'{entity}.valid.json'
+              invalid_f = fixtures_dir / f'{entity}.invalid.json'
+              if valid_f.exists():
+                  try:
+                      validator.validate(json.load(open(valid_f)))
+                  except ValidationError as e:
+                      errors.append(f'{entity}: valid fixture rejected: {e.message}')
+              if invalid_f.exists():
+                  try:
+                      validator.validate(json.load(open(invalid_f)))
+                      errors.append(f'{entity}: invalid fixture was accepted')
+                  except ValidationError:
+                      pass
+
+          if count == 0:
+              print('No schemas yet - skipping.')
+              sys.exit(0)
+          if errors:
+              for e in errors:
+                  print('FAIL', e)
+              sys.exit(1)
+          print(f'All {count} schemas + fixtures pass.')
+          PY
