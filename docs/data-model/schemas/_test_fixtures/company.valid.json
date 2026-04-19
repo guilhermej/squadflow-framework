@@ -1,0 +1,12 @@
+{
+  "id": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+  "name": "Helios",
+  "legal_name": "Helios Corp.",
+  "tax_id": "EIN-12-3456789",
+  "jurisdiction": "US-DE",
+  "state": "active",
+  "founded_on": "2019-04-01",
+  "archived_on": null,
+  "created_at": "2026-04-19T10:00:00Z",
+  "updated_at": "2026-04-19T10:00:00Z"
+}

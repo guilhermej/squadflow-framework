@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://squadflow.dev/schemas/company.json",
+  "title": "Company",
+  "description": "A legal entity that employs Players, owns Brands, runs Factories, and sponsors Projects and OKRs.",
+  "type": "object",
+  "required": ["id", "name", "legal_name", "tax_id", "jurisdiction", "state", "created_at", "updated_at"],
+  "properties": {
+    "id":           { "type": "string", "format": "uuid" },
+    "name":         { "type": "string", "minLength": 1, "maxLength": 200 },
+    "legal_name":   { "type": "string", "minLength": 1, "maxLength": 400 },
+    "tax_id":       { "type": "string", "minLength": 1, "maxLength": 64 },
+    "jurisdiction": { "type": "string", "pattern": "^[A-Z]{2}(-[A-Z0-9]{1,3})?$" },
+    "state":        { "type": "string", "enum": ["active", "archived"] },
+    "founded_on":   { "type": ["string", "null"], "format": "date" },
+    "archived_on":  { "type": ["string", "null"], "format": "date" },
+    "created_at":   { "type": "string", "format": "date-time" },
+    "updated_at":   { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
