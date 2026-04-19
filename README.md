@@ -71,28 +71,28 @@ Full rationale: [MANIFESTO.md](MANIFESTO.md).
 
 SquadFlow's ontology has **nine first-class entities in four layers**.
 
-#### Context — where work happens
+### Context — where work happens
 
 - 🏢 **[Company](docs/ontology/company.md)** — A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes.
 - 🆔 **[Brand](docs/ontology/brand.md)** — A commercial identity owned by a Company, carried to market.
 
-#### Strategy — why work happens
+### Strategy — why work happens
 
 - 🎯 **[OKR](docs/ontology/okr.md)** — Objective and Key Results for a period, scored at close.
 
-#### Execution — how work happens
+### Execution — how work happens
 
 - 🏭 **[Factory](docs/ontology/factory.md)** — Continuous production. Permanent, kanban-based, weekly-reviewed.
 - 🚀 **[Project](docs/ontology/project.md)** — Temporary initiative with defined start, scope, and end — or absorbed into a Factory.
 - ⚔️ **[Squad](docs/ontology/squad.md)** — Cross-functional team of two or more Players.
 - ✅ **[Task](docs/ontology/task.md)** — Atomic unit of work assigned to one Player.
 
-#### People and Knowledge — who and what persists
+### People and Knowledge — who and what persists
 
 - 🏀 **[Player](docs/ontology/player.md)** — The individual who executes. Holds Roles.
 - 📄 **[Document](docs/ontology/document.md)** — Recorded knowledge attached to other entities.
 
-#### Core relationships
+### Core relationships
 
 - A **Company** owns many **Brands**, employs **Players**, runs **Factories**, and scopes **OKRs** and **Projects**.
 - A **Brand** can scope its own **OKRs**, **Projects**, and **Factories**.
