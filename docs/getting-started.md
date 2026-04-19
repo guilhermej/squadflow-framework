@@ -2,7 +2,7 @@
 
 Use SquadFlow in your organization in **15 minutes**. No software to install. No certifications to pursue.
 
-This guide assumes you have skimmed the [Overview](./concepts/overview.md). If you have not, read that first (3 minutes).
+This guide assumes you have skimmed the framework overview in the [README](../README.md). If you have not, read that first (3 minutes).
 
 ## What you need
 

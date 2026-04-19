@@ -27,7 +27,7 @@ Translations live in `i18n/<language-code>/`, mirroring the English structure. P
 - Second person ("you") when addressing readers.
 - Short sentences (~15–20 words on average).
 - Concrete over abstract. Every entity, lifecycle, and process file must include ≥ 2 real examples.
-- No marketing fluff in `docs/` — save voice for `README.md` and `docs/concepts/why-squadflow.md`.
+- No marketing fluff in `docs/` — save voice for `README.md`.
 - Prefer Markdown lists over paragraphs for enumerations.
 - Cross-link liberally. Every term introduced in a file should link to its glossary entry.
 
