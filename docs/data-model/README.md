@@ -18,16 +18,20 @@ erDiagram
   COMPANY ||--o{ BRAND           : owns
   COMPANY ||--o{ PLAYER          : employs
   COMPANY ||--o{ FACTORY         : runs
-  COMPANY ||--o{ OKR             : sets
+  COMPANY ||--o{ OKR             : scopes
   COMPANY ||--o{ PROJECT         : scopes
+  BRAND   ||--o{ OKR             : scopes
   BRAND   ||--o{ PROJECT         : scopes
   BRAND   ||--o{ FACTORY         : carries
-  OKR     }o--o{ FACTORY         : contributed_by
-  OKR     }o--o{ PROJECT         : contributed_by
-  OKR     }o--o{ SQUAD           : contributed_by
+  SQUAD   ||--o{ OKR             : scopes
   SQUAD   ||--o{ PLAYER          : composed_of
   SQUAD   ||--o{ FACTORY         : responsible_for
   SQUAD   ||--o{ PROJECT         : responsible_for
+  OKR     }o--o{ FACTORY         : contributed_by
+  OKR     }o--o{ PROJECT         : contributed_by
+  OKR     }o--o{ SQUAD           : contributed_by
+  TASK    }o--|| FACTORY         : belongs_to
+  TASK    }o--|| PROJECT         : belongs_to
   TASK    }o--|| SQUAD           : belongs_to
   TASK    }o--|| PLAYER          : assigned_to
   PROJECT ||--o| FACTORY         : absorbed_into

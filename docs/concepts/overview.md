@@ -28,17 +28,24 @@ flowchart TB
   Company --> Player
   Company --> Factory
   Company --> OKR
+  Brand --> OKR
   Brand --> Project
-  OKR -.-> Factory
-  OKR -.-> Project
-  OKR -.-> Squad
+  Squad --> OKR
   Squad --> Factory
   Squad --> Project
   Squad --> Player
+  OKR -.-> Factory
+  OKR -.-> Project
+  OKR -.-> Squad
+  Task --> Factory
+  Task --> Project
   Task --> Squad
   Task --> Player
   Document -.-> Company
+  Document -.-> Brand
+  Document -.-> Factory
   Document -.-> Project
+  Document -.-> Squad
 ```
 
 Solid arrows mean ownership or composition. Dashed arrows mean contribution or attachment — softer links that don't imply containment.
