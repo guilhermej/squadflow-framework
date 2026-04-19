@@ -27,8 +27,6 @@
   <img src="docs/assets/hero.svg" alt="SquadFlow three-layer model — Context, Strategy, Execution, People and Knowledge" width="960">
 </p>
 
----
-
 ## Contents
 
 1. [Why SquadFlow](#why-squadflow)
@@ -45,8 +43,6 @@
 12. [Full reference](#full-reference)
 13. [Contributing & license](#contributing--license)
 
----
-
 ## Why SquadFlow
 
 Running a company is two different jobs.
@@ -61,8 +57,6 @@ If this framing clicks for you, read on. If it does not, no framework will help;
 
 SquadFlow is for **founders, COOs, and chiefs of staff at scale-ups and multi-brand groups** — 10 to 200 people, more than one brand or business unit. If you are a team of five, you do not need a framework. If you are running a pure engineering shop with one Scrum team, keep Scrum.
 
----
-
 ## The five principles
 
 1. **Factories run your business. Projects change it.** A Factory is permanent; a Project has a start, a scope, and an end.
@@ -73,41 +67,46 @@ SquadFlow is for **founders, COOs, and chiefs of staff at scale-ups and multi-br
 
 Full rationale: [MANIFESTO.md](MANIFESTO.md).
 
----
-
 ## The nine entities
 
 SquadFlow's ontology has **nine first-class entities in four layers**.
 
-| Layer | Entity | One-line |
-|---|---|---|
-| **Context** | 🏢 [**Company**](docs/ontology/company.md) | A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes. |
-| Context | 🆔 [**Brand**](docs/ontology/brand.md) | A commercial identity owned by a Company, carried to market. |
-| **Strategy** | 🎯 [**OKR**](docs/ontology/okr.md) | Objective + Key Results for a period, scored at close. |
-| **Execution** | 🏭 [**Factory**](docs/ontology/factory.md) | Continuous production — permanent, kanban-based, weekly-reviewed. |
-| Execution | 🚀 [**Project**](docs/ontology/project.md) | Temporary initiative with defined start, scope, end — or absorbed into a Factory. |
-| Execution | ⚔️ [**Squad**](docs/ontology/squad.md) | Cross-functional team of two or more Players. |
-| Execution | ✅ [**Task**](docs/ontology/task.md) | Atomic unit of work assigned to one Player. |
-| **People** | 🏀 [**Player**](docs/ontology/player.md) | The individual who executes. Holds Roles. |
-| **Knowledge** | 📄 [**Document**](docs/ontology/document.md) | Recorded knowledge attached to other entities. |
+#### Context — where work happens
 
-### Core relationships
+- 🏢 **[Company](docs/ontology/company.md)** — A legal entity (LLC/Ltda/Corp) that signs contracts and pays taxes.
+- 🆔 **[Brand](docs/ontology/brand.md)** — A commercial identity owned by a Company, carried to market.
+
+#### Strategy — why work happens
+
+- 🎯 **[OKR](docs/ontology/okr.md)** — Objective and Key Results for a period, scored at close.
+
+#### Execution — how work happens
+
+- 🏭 **[Factory](docs/ontology/factory.md)** — Continuous production. Permanent, kanban-based, weekly-reviewed.
+- 🚀 **[Project](docs/ontology/project.md)** — Temporary initiative with defined start, scope, and end — or absorbed into a Factory.
+- ⚔️ **[Squad](docs/ontology/squad.md)** — Cross-functional team of two or more Players.
+- ✅ **[Task](docs/ontology/task.md)** — Atomic unit of work assigned to one Player.
+
+#### People and Knowledge — who and what persists
+
+- 🏀 **[Player](docs/ontology/player.md)** — The individual who executes. Holds Roles.
+- 📄 **[Document](docs/ontology/document.md)** — Recorded knowledge attached to other entities.
+
+#### Core relationships
 
 - A **Company** owns many **Brands**, employs **Players**, runs **Factories**, and scopes **OKRs** and **Projects**.
 - A **Brand** can scope its own **OKRs**, **Projects**, and **Factories**.
-- A **Squad** is responsible for running **Factories** and executing **Projects**. It can also have its own squad-level **OKRs**.
+- A **Squad** is responsible for running **Factories** and executing **Projects**. It can also have squad-level **OKRs**.
 - Every **Task** belongs to exactly one **Factory**, **Project**, or **Squad**, and is assigned to exactly one **Player**.
 - **OKRs** are contributed to by **Factories**, **Projects**, and **Squads** (many-to-many).
-- A successful **Project** that produces continuous output is *absorbed* into a new **Factory** at close.
+- A successful **Project** producing continuous output is *absorbed* into a new **Factory** at close.
 - **Documents** attach to any entity for knowledge persistence.
 
-For the full schema with cardinalities, see [docs/data-model/er-diagram.svg](docs/data-model/er-diagram.svg).
-
----
+Full schema with cardinalities: [docs/data-model/er-diagram.svg](docs/data-model/er-diagram.svg).
 
 ## Lifecycles at a glance
 
-Every entity has a finite state machine. The full diagrams live in [`docs/lifecycles/`](docs/lifecycles/); here is the summary.
+Every entity has a finite state machine. Full diagrams in [`docs/lifecycles/`](docs/lifecycles/); summary below.
 
 | Entity | States | Key transition |
 |---|---|---|
@@ -122,8 +121,6 @@ Every entity has a finite state machine. The full diagrams live in [`docs/lifecy
 | Document | `draft → in_review → published ⇄ outdated → archived` | `outdated` is a first-class flag — stale docs are marked, not hidden. |
 
 The `absorbed` transition on Project is the most important motion in SquadFlow: **a successful Project that must be operated continuously becomes a new Factory**.
-
----
 
 ## Cadence stack
 
@@ -143,8 +140,6 @@ Skip any level that does not fit your size. A 20-person company does not need a 
 
 Detail: [`docs/processes/cadences.md`](docs/processes/cadences.md) · [`docs/processes/ceremonies.md`](docs/processes/ceremonies.md).
 
----
-
 ## Roles
 
 Roles are named responsibilities held by Players. One Player can hold several Roles simultaneously. Roles are not job titles.
@@ -159,8 +154,6 @@ Roles are named responsibilities held by Players. One Player can hold several Ro
 | **Org Steward** | 1 Company or Brand | Approves state transitions; does *not* micromanage. |
 
 Detail: [`docs/processes/roles.md`](docs/processes/roles.md).
-
----
 
 ## Governance
 
@@ -189,8 +182,6 @@ Detail: [`docs/processes/roles.md`](docs/processes/roles.md).
 
 Full RACI matrix and decision-log pattern: [`docs/processes/governance.md`](docs/processes/governance.md).
 
----
-
 ## Quickstart
 
 Use SquadFlow in **15 minutes**. No software to install. Runs on Notion, a whiteboard, or whatever you already use.
@@ -205,8 +196,6 @@ Within a week, hit a question not obviously answered? Find it in [`docs/ontology
 
 Step-by-step walkthrough: [`docs/getting-started.md`](docs/getting-started.md).
 Downloadable Notion template: ships with v1.0 (see [`templates/notion/`](templates/notion/)).
-
----
 
 ## How SquadFlow compares
 
@@ -229,8 +218,6 @@ Detailed per-framework comparisons: [`docs/comparisons/`](docs/comparisons/).
 - **Single Scrum team running one product** → Scrum alone. Do not adopt SquadFlow on top.
 - **Enterprise with 500+ engineers already in SAFe** → stay. Switching has real cost.
 
----
-
 ## Data model
 
 SquadFlow ships with a **formal data model**: nine JSON Schemas (draft 2020-12), an ER diagram, and naming conventions. Validated in CI; generate idiomatic clients without manual edits.
@@ -246,8 +233,6 @@ datamodel-codegen --input docs/data-model/schemas/project.schema.json \
 
 Source: [`docs/data-model/`](docs/data-model/) — conventions, ER diagram, 9 schemas, test fixtures.
 
----
-
 ## Who uses it
 
 **Grupo Solyd** — the framework was born from the day-to-day operation of:
@@ -261,8 +246,6 @@ Source: [`docs/data-model/`](docs/data-model/) — conventions, ER diagram, 9 sc
 A detailed case study ships in [`examples/multi-brand-group.md`](examples/multi-brand-group.md) with v1.0.
 
 If you are running SquadFlow in your own organization, open an Issue or PR to add yourself here.
-
----
 
 ## Full reference
 
@@ -281,8 +264,6 @@ For deeper reading — especially if you are implementing the framework as softw
 | [Notion template](templates/notion/) | Importable starter workspace (ships with v1.0). |
 | [Examples](examples/) | Worked cases — fictional SaaS, Grupo Solyd. |
 
----
-
 ## Contributing & license
 
 Contributions, translations, and adaptations are welcome.
@@ -298,8 +279,6 @@ Before contributing, read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUC
 
 **License:** [CC-BY-SA 4.0](LICENSE). You may share, adapt, and build commercial products on top — as long as you credit the origin and keep your derivatives under the same license. Attributions should point to <https://github.com/guilhermej/squadflow-framework>.
 
----
-
 ## Acknowledgments
 
 SquadFlow stands on the shoulders of frameworks that came before:
@@ -313,36 +292,7 @@ The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tes
 
 ---
 
-## Stay connected
-
-<table>
-<tr>
-<td align="center">
-  <a href="https://github.com/guilhermej/squadflow-framework/stargazers">
-    <img src="https://img.shields.io/github/stars/guilhermej/squadflow-framework?style=social" alt="Stars">
-  </a><br>
-  <sub>Star to follow</sub>
-</td>
-<td align="center">
-  <a href="https://github.com/guilhermej/squadflow-framework/watchers">
-    <img src="https://img.shields.io/github/watchers/guilhermej/squadflow-framework?style=social" alt="Watchers">
-  </a><br>
-  <sub>Watch releases</sub>
-</td>
-<td align="center">
-  <a href="https://github.com/guilhermej/squadflow-framework/forks">
-    <img src="https://img.shields.io/github/forks/guilhermej/squadflow-framework?style=social" alt="Forks">
-  </a><br>
-  <sub>Fork and adapt</sub>
-</td>
-</tr>
-</table>
-
----
-
-## Author
-
-<table>
+<table align="center">
 <tr>
 <td width="120" align="center">
   <a href="https://github.com/guilhermej"><img src="https://github.com/guilhermej.png" width="96" height="96" alt="Guilherme" style="border-radius: 50%"></a>
@@ -350,21 +300,19 @@ The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tes
 <td>
   <strong>Guilherme Junqueira Soares</strong><br>
   CEO — <a href="https://solyd.com.br">Solyd Research</a><br>
-  guilherme[at]solyd[.]com[.]br<br>
-  <a href="https://github.com/guilhermej">@guilhermej</a>
+  guilherme[at]solyd[.]com[.]br · <a href="https://github.com/guilhermej">@guilhermej</a>
+</td>
+<td align="center" width="260">
+  <a href="https://github.com/guilhermej/squadflow-framework/stargazers"><img src="https://img.shields.io/github/stars/guilhermej/squadflow-framework?style=social" alt="Stars"></a>
+  <a href="https://github.com/guilhermej/squadflow-framework/watchers"><img src="https://img.shields.io/github/watchers/guilhermej/squadflow-framework?style=social" alt="Watchers"></a>
+  <a href="https://github.com/guilhermej/squadflow-framework/forks"><img src="https://img.shields.io/github/forks/guilhermej/squadflow-framework?style=social" alt="Forks"></a>
 </td>
 </tr>
 </table>
 
----
-
 <p align="center">
   <sub>
     <strong>SquadFlow is a young framework.</strong> v1.0 is the first public release; the ontology may evolve with feedback.<br>
-    Built with care in Brazil · <a href="CHANGELOG.md">Changelog</a> · <a href="https://github.com/guilhermej/squadflow-framework/releases">Releases</a>
+    Built with care in Brazil · <a href="CHANGELOG.md">Changelog</a> · <a href="https://github.com/guilhermej/squadflow-framework/releases">Releases</a> · © 2026 Guilherme Junqueira Soares · <a href="LICENSE">CC-BY-SA 4.0</a>
   </sub>
-</p>
-
-<p align="center">
-  <sub>© 2026 Guilherme Junqueira Soares — Licensed under <a href="LICENSE">CC-BY-SA 4.0</a></sub>
 </p>
