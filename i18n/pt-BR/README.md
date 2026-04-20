@@ -29,11 +29,10 @@
 
 > [!NOTE]
 > Esta é a versão em português do SquadFlow. A **fonte da verdade é o [README em inglês](../../README.md)** — diferenças devem ser tratadas como erro de tradução e corrigidas via PR. Terminologia canônica PT-BR na tabela abaixo.
-
-> [!IMPORTANT]
-> **Em uma frase:**
-> Trabalho contínuo e trabalho de mudança são disciplinas diferentes, e a maioria dos frameworks finge que não são.
-> SquadFlow mantém os dois separados — e nomeia o momento em que uma mudança bem-sucedida vira rotina.
+>
+> ---
+>
+> **Em uma frase:** Trabalho contínuo e trabalho de mudança são disciplinas diferentes, e a maioria dos frameworks finge que não são. SquadFlow mantém os dois separados — e nomeia o momento em que uma mudança bem-sucedida vira rotina.
 
 ## O SquadFlow é para você?
 

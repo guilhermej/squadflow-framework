@@ -102,6 +102,7 @@ Before pushing, run the local commands above. CI failures are usually MD034 (bar
 Report vulnerabilities via [Security Advisories](https://github.com/guilhermej/squadflow-framework/security/advisories). See [`SECURITY.md`](SECURITY.md) for scope.
 
 Never commit:
+
 - Real secrets, API keys, tokens, or environment files.
 - Personal data about contributors beyond their public GitHub profile.
 - Files from any private sibling project on the same machine (respect `CLAUDE.local.md` if present — it is gitignored and holds private context).
