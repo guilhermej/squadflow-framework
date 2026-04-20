@@ -354,9 +354,6 @@ The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tes
 
 <table align="center">
 <tr>
-<td width="120" align="center">
-  <a href="https://github.com/guilhermej"><img src="https://github.com/guilhermej.png" width="96" height="96" alt="Guilherme" style="border-radius: 50%"></a>
-</td>
 <td>
   <strong>Guilherme Junqueira Soares</strong><br>
   CEO — <a href="https://solyd.com.br">Solyd Research</a><br>
