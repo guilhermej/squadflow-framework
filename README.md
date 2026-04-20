@@ -370,6 +370,6 @@ The framework was born inside [**Grupo Solyd**](https://solyd.com.br) and is tes
 <p align="center">
   <sub>
     <strong>SquadFlow is a young framework.</strong> v1.0 is the first public release; the ontology may evolve with feedback.<br>
-    Built with care in Brazil · <a href="CHANGELOG.md">Changelog</a> · <a href="https://github.com/guilhermej/squadflow-framework/releases">Releases</a> · © 2026 Guilherme Junqueira Soares · <a href="LICENSE">CC-BY-SA 4.0</a>
+    Built with care in Brazil · <a href="CHANGELOG.md">Changelog</a> · © 2026 Guilherme Junqueira Soares · <a href="LICENSE">CC-BY-SA 4.0</a>
   </sub>
 </p>
