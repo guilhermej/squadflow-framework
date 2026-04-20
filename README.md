@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/hero.png" alt="SquadFlow three-layer model diagram showing Context (Company, Brand), Strategy (OKR), Execution (Factory, Project, Squad, Task), and People and Knowledge (Player, Document) with the tagline 'Factories run your business. Projects change it.'" width="960">
+  <img src="docs/assets/hero-v2.png" alt="SquadFlow three-layer model diagram showing Context (Company, Brand), Strategy (OKR), Execution (Factory, Project, Squad, Task), and People and Knowledge (Player, Document) with the tagline 'Factories run your business. Projects change it.'" width="960">
 </p>
 
 > [!IMPORTANT]
